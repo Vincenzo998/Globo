@@ -1,18 +1,14 @@
 import React from 'react';
-import { StyleSheet, Image } from 'react-native';
+import { Image } from 'react-native';
+import { Text, Content } from 'native-base';
 
 export class Hero extends React.Component {
     render() {
         return(
-            <Image style={styles.heroImage} source={ require('./../assets/images/laptop2.jpg') }/> 
+            <Content>
+                <Image style={{ width: 'auto', height: 350 }} source={ require('./../assets/images/laptop2.jpg') }/>
+                <Text style={{ textAlign: 'center', fontSize: 30, color: 'white', margin: 30, flexDirection: 'row', borderBottomColor: 'white', borderBottomWidth: 1, paddingBottom: 5 }}> Welcome in my App </Text>                 
+            </Content>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    heroImage: {
-        width: 'auto',
-        height: 'auto',
-        flex: 8
-    }
-});
