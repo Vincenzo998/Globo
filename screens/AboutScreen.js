@@ -13,10 +13,9 @@ export class AboutScreen extends React.Component {
     };
 
     render() {
-        const { navigate } = this.props.navigation;
         return (
             <Container>
-                <HeaderScreen navigate={navigate} message = 'Press to Login'/>
+                <HeaderScreen navigate={this.props.navigation} message = 'Press to Login'/>
                 <Content>
                     <Card style={{ flex: 0 }}>
                         <CardItem style={{ alignItems: 'center' }}>

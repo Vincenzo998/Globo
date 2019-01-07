@@ -51,7 +51,6 @@ export class QuizScreen extends React.Component {
                 completedQuiz: true
             });
         }
-        console.log(this.state)
     }
     
     finishQuiz = () => {
@@ -65,10 +64,9 @@ export class QuizScreen extends React.Component {
     }
 
     render() {
-        const { navigate } = this.props.navigation;
         return(
             <Container>
-                <HeaderScreen navigate={navigate} message = 'Press to Login'/>
+                <HeaderScreen navigate={this.props.navigation} message = 'Press to Login'/>
                 <Content>
                     { 
                         this.state.questLoaded && (

@@ -3,10 +3,6 @@ import { Text, View, FlatList, Image, TouchableWithoutFeedback } from 'react-nat
 import { Spinner } from 'native-base';
 
 export class VideoScreen extends React.Component {
-    static NavigationOptions = { 
-        header: null
-    };
-
     constructor(props) {
         super(props);
         this.state = {

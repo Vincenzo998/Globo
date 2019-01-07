@@ -45,25 +45,21 @@ export class HeaderScreen extends React.Component {
         });
     }
 
-    returnHome = () => {
-        this.props.navigate('HomeRT');
-    }
-
     render() {
         let display = this.state.isLoggedIn ? this.state.loggedUser : this.props.message;
         return (
             <Header style={{ backgroundColor: '#35605a', marginTop: 24 }}>
-                <Left>
-                    <Button transparent onPress={() => this.props.navigate('DrawerOpenRT')}>
+                <Left style={{ flex: 1 }}>
+                    <Button transparent onPress={() => this.props.navigate.openDrawer()}>
                         <Icon name='menu'/>
                     </Button> 
                 </Left>
-                <Body style={{ paddingTop: 6 }}>
-                    <Button transparent onPress={this.returnHome}>
+                <Body style={{ paddingTop: 6, flex: 2 }}>
+                    <Button transparent onPress={() => this.props.navigate('HomeRT') }>
                         <Image style={{ height: 50, width: 165, flex: 1 }} source={ require('./../assets/images/Globo_logo_REV.png') }/>
                     </Button>
                 </Body>
-                <Right>
+                <Right style={{ flex: 1 }}>
                     <Text style={styles.headText} onPress={this.toggleUser}> {display} </Text>                    
                 </Right>       
             </Header>
@@ -76,6 +72,6 @@ const styles = StyleSheet.create({
   headText: {
     textAlign: 'right',
     color: '#ffffff',
-    fontSize: 20
+    fontSize: 17
   }
 });

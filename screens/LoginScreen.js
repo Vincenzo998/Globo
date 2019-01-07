@@ -58,10 +58,9 @@ export class LoginScreen extends React.Component {
     };
 
     render() {
-        const { navigate } = this.props.navigation;
         return(
             <Container>
-                <HeaderScreen navigate={navigate} message = 'Press to Login'/>
+                <HeaderScreen navigate={this.props.navigation} message = 'Press to Login'/>
                 <Content>
                     <Form style={styles.form}>
                         <Item floatingLabel style={styles.item}>

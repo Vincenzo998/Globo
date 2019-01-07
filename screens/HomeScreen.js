@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { HeaderScreen } from './../components/Header.js';
-import { Hero } from './../components/Hero.js';
 import { Container, Content } from 'native-base';
+
+import { Hero } from './../components/Hero.js';
+import { HeaderScreen } from './../components/Header.js';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -10,14 +11,13 @@ export default class HomeScreen extends React.Component {
   };
 
   render() {
-    const { navigate } = this.props.navigation;
     return (
-      <Container style={{ backgroundColor: '#35605a' }}>
-        <Content>  
-          <HeaderScreen navigate={navigate} message='Press to Login' />
-          <Hero />
-        </Content>
-      </Container>
+        <Container style={{ backgroundColor: '#35605a' }}>
+          <Content>  
+            <HeaderScreen navigate={this.props.navigation} message='Press to Login' />
+            <Hero />
+          </Content>
+        </Container>
     );
   }
 }
